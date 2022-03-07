@@ -1,0 +1,11 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        
+      int i = 0;
+    for (int n : nums)
+        if (i == 0 || n > nums[i-1])  //this if cond run when element at "n"(n:nums) is greater than  element at i-1
+            nums[i++] = n;  //it always update element at i but checks for element at i-1 ,whether element at "n"(n:nums) is greater than  element at i-1, and incerement i
+    return i;
+    
+    }
+}
